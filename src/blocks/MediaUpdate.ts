@@ -1,10 +1,10 @@
 import { Block } from "payload/types";
 
-const Headline: Block = {
-  slug: 'headline',
+const MediaUpdate: Block = {
+  slug: 'mediaUpdate',
   labels: {
-    singular: 'Media Block',
-    plural: 'Media Blocks'
+    singular: 'Media Update Block',
+    plural: 'Media Update Blocks'
   },
   fields: [
     {
@@ -20,4 +20,4 @@ const Headline: Block = {
   ]
 }
 
-export default Headline
+export default MediaUpdate

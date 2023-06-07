@@ -1,6 +1,7 @@
 import { CollectionConfig } from "payload/types";
-import Headline from "../blocks/Headline";
 import Intro from "../blocks/Intro"
+import MediaUpdate from "../blocks/MediaUpdate";
+import MediaHeadline from "../blocks/MediaHeadline";
 
 const Posts: CollectionConfig = {
   slug: 'posts',
@@ -27,8 +28,9 @@ const Posts: CollectionConfig = {
       type: 'blocks',
       minRows: 1,
       blocks: [
-        Headline,
-        Intro
+        MediaHeadline,
+        Intro,
+        MediaUpdate
       ]
     }
   ]
