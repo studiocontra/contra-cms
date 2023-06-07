@@ -1,4 +1,6 @@
 import { CollectionConfig } from "payload/types";
+import Headline from "../blocks/Headline";
+import Intro from "../blocks/Intro"
 
 const Posts: CollectionConfig = {
   slug: 'posts',
@@ -10,5 +12,26 @@ const Posts: CollectionConfig = {
       'status'
     ]
   },
-
+  access: {
+    read: () => true
+  },
+  fields: [
+    {
+      name: 'title',
+      type: 'text',
+      localized: true
+    },
+    {
+      name: 'layout',
+      label: 'Page Layout',
+      type: 'blocks',
+      minRows: 1,
+      blocks: [
+        Headline,
+        Intro
+      ]
+    }
+  ]
 }
+
+export default Posts
