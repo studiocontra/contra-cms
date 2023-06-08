@@ -7,8 +7,8 @@ import MediaUpdate from "../blocks/MediaUpdate";
 import MediaHeadline from "../blocks/MediaHeadline";
 import Content from "../blocks/Content";
 
-const Posts: CollectionConfig = {
-  slug: 'posts',
+const Updates: CollectionConfig = {
+  slug: 'updates',
   admin: {
     useAsTitle: 'title',
     defaultColumns: [
@@ -44,6 +44,8 @@ const Posts: CollectionConfig = {
       name: 'slug',
       type: 'text',
       required: true,
+      localized: true,
+      unique: true,
       admin: {
         position: "sidebar"
       },
@@ -69,4 +71,4 @@ const Posts: CollectionConfig = {
   ]
 }
 
-export default Posts
+export default Updates

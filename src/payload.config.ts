@@ -3,7 +3,7 @@ import path from 'path';
 // import Examples from './collections/Examples';
 import Users from './collections/Users';
 import Media from './collections/Media';
-import Posts from './collections/Posts';
+import Updates from './collections/Updates';
 
 export default buildConfig({
   serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL,
@@ -16,7 +16,7 @@ export default buildConfig({
   collections: [
     Users,
     Media,
-    Posts
+    Updates
   ],
 
   typescript: {
