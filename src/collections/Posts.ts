@@ -29,6 +29,18 @@ const Posts: CollectionConfig = {
       required: true
     },
     {
+      name: 'layout',
+      label: 'Page Layout',
+      type: 'blocks',
+      minRows: 3,
+      blocks: [
+        MediaHeadline,
+        Intro,
+        MediaUpdate,
+        Content
+      ]
+    },
+    {
       name: 'slug',
       type: 'text',
       required: true,
@@ -42,16 +54,16 @@ const Posts: CollectionConfig = {
       }
     },
     {
-      name: 'layout',
-      label: 'Page Layout',
-      type: 'blocks',
-      minRows: 3,
-      blocks: [
-        MediaHeadline,
-        Intro,
-        MediaUpdate,
-        Content
-      ]
+      name: 'status',
+      type: 'select',
+      required: true,
+      options: [
+        'draft',
+        'publish'
+      ],
+      admin: {
+        position: "sidebar"
+      }
     },
     
   ]
