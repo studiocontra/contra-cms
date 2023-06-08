@@ -1,4 +1,5 @@
 import { CollectionConfig } from "payload/types";
+import link from '../fields/link'
 
 const Projects: CollectionConfig = {
   slug: 'projects',
@@ -21,7 +22,12 @@ const Projects: CollectionConfig = {
         archived: { equals: false },
       },
       hasMany: true
-    }
+    },
+    {
+      name: 'featured',
+      type: 'checkbox',
+    },
+    link
   ]
 }
 
