@@ -7,6 +7,8 @@ import Updates from './collections/Updates';
 import Members from './collections/Members';
 import Projects from './collections/Projects';
 import Categories from './collections/Categories';
+import Awards from './collections/Awards';
+import Platforms from './collections/Platforms';
 
 export default buildConfig({
   serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL,
@@ -22,7 +24,9 @@ export default buildConfig({
     Updates,
     Members,
     Projects,
-    Categories
+    Categories,
+    Awards,
+    Platforms
   ],
 
   typescript: {
