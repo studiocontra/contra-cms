@@ -81,21 +81,21 @@ const Projects: CollectionConfig = {
     {
       name: 'title',
       type: 'text',
+      required: true,
     },
     {
       name: 'categories',
       type: 'relationship',
       relationTo: 'categories',
-      filterOptions: {
-        archived: { equals: false },
-      },
-      hasMany: true
+      hasMany: true,
+      required: true,
     },
     {
       name: 'description',
       type: 'textarea',
       label: 'Extracto',
-      localized: true
+      localized: true,
+      required: true,
     },
     {
       name: 'preview',
@@ -104,7 +104,8 @@ const Projects: CollectionConfig = {
       relationTo: 'media',
       admin: {
         condition: (data, { featured }) => Boolean(featured),
-      }
+      },
+      required: true,
     },
     fieldsFeatured,
     fieldsNotFeatured,

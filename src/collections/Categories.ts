@@ -13,10 +13,6 @@ const Categories: CollectionConfig = {
       name: 'name',
       type: 'text'
     },
-    {
-      name: 'archived',
-      type: 'checkbox'
-    }
   ]
 }
 

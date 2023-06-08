@@ -9,6 +9,7 @@ import Projects from './collections/Projects';
 import Categories from './collections/Categories';
 import Awards from './collections/Awards';
 import Platforms from './collections/Platforms';
+import Pages from './collections/Pages';
 
 export default buildConfig({
   serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL,
@@ -26,7 +27,8 @@ export default buildConfig({
     Projects,
     Categories,
     Awards,
-    Platforms
+    Platforms,
+    Pages
   ],
 
   typescript: {

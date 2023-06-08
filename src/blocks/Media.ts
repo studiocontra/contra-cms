@@ -8,10 +8,10 @@ const Media: Block = {
   },
   fields: [
     {
-      name: 'isImage',
-      label: 'Image',
+      name: 'isVimeo',
+      label: 'Vimeo',
       type: 'checkbox',
-      defaultValue: true
+      defaultValue: false
     },
     {
       type: 'row',
@@ -72,7 +72,7 @@ const Media: Block = {
       type: 'upload',
       relationTo: 'media',
       admin: {
-        condition: (data, { isImage }) => Boolean(isImage),
+        condition: (data, { isVimeo }) => Boolean(!isVimeo),
       }
     },
     {
@@ -80,7 +80,7 @@ const Media: Block = {
       label: 'Vimeo',
       type: 'text',
       admin: {
-        condition: (data, { isImage }) => Boolean(!isImage),
+        condition: (data, { isVimeo }) => Boolean(isVimeo),
       }
     }
   ]

@@ -8,10 +8,10 @@ const HeroProject: Block = {
   },
   fields: [
     {
-      name: 'isImage',
-      label: 'Image',
+      name: 'isVimeo',
+      label: 'Vimeo',
       type: 'checkbox',
-      defaultValue: true,
+      defaultValue: false,
     },
     {
       type: 'row',
@@ -22,7 +22,7 @@ const HeroProject: Block = {
           type: 'upload',
           relationTo: 'media',
           admin: {
-            condition: (data, { isImage }) => Boolean(isImage),
+            condition: (data, { isVimeo }) => Boolean(!isVimeo),
           }
         },
         {
@@ -30,7 +30,7 @@ const HeroProject: Block = {
           label: 'Vimeo ID',
           type: 'text',
           admin: {
-            condition: (data, { isImage }) => Boolean(!isImage),
+            condition: (data, { isVimeo }) => Boolean(isVimeo),
           }
         }
       ]
