@@ -26,6 +26,7 @@ export default buildConfig({
   localization: {
     defaultLocale: 'es',
     locales: ['en', 'es'],
+    fallback: true
   },
 
   graphQL: {

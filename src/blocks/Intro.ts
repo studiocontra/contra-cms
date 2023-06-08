@@ -3,7 +3,7 @@ import { Block } from "payload/types";
 const Intro: Block = {
   slug: 'intro',
   labels: {
-    singular: 'Intro Block',
+    singular: 'Intro',
     plural: 'Intro Blocks',
   },
   fields: [
