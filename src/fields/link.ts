@@ -7,6 +7,7 @@ const link: Field = {
       name: 'label',
       label: 'Label',
       type: 'text',
+      localized: true,
       required: true
     },
     {
