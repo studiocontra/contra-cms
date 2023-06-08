@@ -30,14 +30,18 @@ const Posts: CollectionConfig = {
     {
       name: 'slug',
       type: 'text',
-      required: true,
       admin: {
-        position: "sidebar"
+        position: "sidebar",
+        readOnly: true
       },
       hooks: {
         beforeValidate: [
-          formatSlug('title')
-        ]
+          ({ req: { payload }, data }) => {
+              if (payload) {
+                  return formatSlug(data.title)
+              }
+          },
+      ],
       }
     },
     {
