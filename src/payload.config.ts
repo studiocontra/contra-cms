@@ -4,6 +4,7 @@ import path from 'path';
 import Users from './collections/Users';
 import Media from './collections/Media';
 import Updates from './collections/Updates';
+import Members from './collections/Members';
 
 export default buildConfig({
   serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL,
@@ -16,7 +17,8 @@ export default buildConfig({
   collections: [
     Users,
     Media,
-    Updates
+    Updates,
+    Members
   ],
 
   typescript: {
