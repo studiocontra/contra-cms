@@ -13,6 +13,7 @@ const Posts: CollectionConfig = {
     useAsTitle: 'title',
     defaultColumns: [
       'title',
+      'slug',
       'publishDate',
       'status'
     ]
@@ -30,18 +31,14 @@ const Posts: CollectionConfig = {
     {
       name: 'slug',
       type: 'text',
+      required: true,
       admin: {
-        position: "sidebar",
-        readOnly: true
+        position: "sidebar"
       },
       hooks: {
         beforeValidate: [
-          ({ req: { payload }, data }) => {
-              if (payload) {
-                  return formatSlug(data.title)
-              }
-          },
-      ],
+          formatSlug('title')
+        ]
       }
     },
     {
