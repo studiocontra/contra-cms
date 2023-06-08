@@ -5,6 +5,8 @@ import Users from './collections/Users';
 import Media from './collections/Media';
 import Updates from './collections/Updates';
 import Members from './collections/Members';
+import Projects from './collections/Projects';
+import Categories from './collections/Categories';
 
 export default buildConfig({
   serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL,
@@ -18,7 +20,9 @@ export default buildConfig({
     Users,
     Media,
     Updates,
-    Members
+    Members,
+    Projects,
+    Categories
   ],
 
   typescript: {
