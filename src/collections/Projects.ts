@@ -37,16 +37,10 @@ const Projects: CollectionConfig = {
       name: 'title',
       type: 'text',
       required: true,
+      localized: true
     },
     {
-      name: 'categories',
-      type: 'relationship',
-      relationTo: 'categories',
-      hasMany: true,
-      required: true,
-    },
-    {
-      name: 'description',
+      name: 'extract',
       type: 'textarea',
       label: 'Extracto',
       localized: true,
@@ -60,6 +54,14 @@ const Projects: CollectionConfig = {
       admin: {
         condition: (data, { featured }) => Boolean(featured),
       },
+      required: true
+    },
+    {
+      name: 'categories',
+      type: 'relationship',
+      relationTo: 'categories',
+      hasMany: true,
+      required: true,
     },
     {
       name: 'images',
