@@ -3,28 +3,33 @@ import { CollectionConfig } from "payload/types";
 const Awards: CollectionConfig = {
   slug: 'awards',
   admin: {
-    useAsTitle: 'project',
+    useAsTitle: 'title',
   },
   access: {
     read: () => true
   },
   fields: [
     {
-      name: 'project',
-      label: 'Project',
-      type: 'text'
-    },
-    {
-      name: 'award',
-      label: 'Award',
-      type: 'text'
-    },
-    {
-      name: 'platform',
+      name: 'title',
       label: 'Platform',
-      type: 'relationship',
-      relationTo: 'platforms'
-    }
+      type: 'text'
+    },
+    {
+      name: 'awards',
+      label: 'Awards',
+      type: 'array',
+      fields: [
+        {
+          name: 'project',
+          type: 'text'
+        },
+        {
+          name: 'award',
+          type: 'text',
+          localized: true
+        }
+      ]
+    },
   ]
 }
 

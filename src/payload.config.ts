@@ -8,7 +8,6 @@ import Members from './collections/Members';
 import Projects from './collections/Projects';
 import Categories from './collections/Categories';
 import Awards from './collections/Awards';
-import Platforms from './collections/Platforms';
 import Pages from './collections/Pages';
 
 export default buildConfig({
@@ -27,7 +26,6 @@ export default buildConfig({
     Projects,
     Categories,
     Awards,
-    Platforms,
     Pages
   ],
 

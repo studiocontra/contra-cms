@@ -12,7 +12,27 @@ const Projects: Block = {
       label: 'Featured Projects',
       type: 'relationship',
       relationTo: 'projects',
-    }
+      filterOptions: {
+        featured: { equals: true },
+      },
+    },
+    {
+      name: 'moreProjects',
+      label: 'More Projects',
+      type: 'checkbox',
+    },
+    {
+      name: 'notFeaturedProjects',
+      label: 'More Projects',
+      type: 'relationship',
+      relationTo: 'projects',
+      filterOptions: {
+        featured: { equals: false },
+      },
+      admin: {
+        condition: (data, { moreProjects }) => Boolean(moreProjects),
+      }
+    },
   ]
 }
 
