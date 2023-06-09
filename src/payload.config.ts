@@ -4,7 +4,7 @@ import path from 'path';
 import Users from './collections/Users';
 import Media from './collections/Media';
 import Updates from './collections/Updates';
-import Members from './collections/Members';
+import Team from './collections/Team';
 import Projects from './collections/Projects';
 import Categories from './collections/Categories';
 import Awards from './collections/Awards';
@@ -22,11 +22,11 @@ export default buildConfig({
     Users,
     Media,
     Updates,
-    Members,
+    Team,
     Projects,
     Categories,
     Awards,
-    Pages
+    Pages,
   ],
 
   typescript: {

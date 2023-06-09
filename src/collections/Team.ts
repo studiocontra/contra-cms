@@ -1,7 +1,7 @@
 import { CollectionConfig } from "payload/types";
 
-const Members: CollectionConfig = {
-  slug: 'members',
+const Team: CollectionConfig = {
+  slug: 'team',
   admin: {
     useAsTitle: 'name',
     defaultColumns: ['name', 'role', 'featured'],
@@ -53,4 +53,4 @@ const Members: CollectionConfig = {
   ]
 }
 
-export default Members
+export default Team

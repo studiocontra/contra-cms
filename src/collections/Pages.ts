@@ -1,6 +1,8 @@
 import { CollectionConfig } from "payload/types";
 import Projects from "../blocks/Projects";
 import Awards from '../blocks/Awards'
+import Members from "../blocks/Members";
+import Partners from "../blocks/Partners";
 
 const Pages: CollectionConfig = {
   slug: 'pages',
@@ -21,7 +23,9 @@ const Pages: CollectionConfig = {
       type: 'blocks',
       blocks: [
         Projects,
-        Awards
+        Awards,
+        Members,
+        Partners
       ]
     },
   ]
