@@ -3,10 +3,35 @@ import { Block } from "payload/types";
 const Projects: Block = {
   slug: 'projects',
   labels: {
-    singular: 'Projects',
-    plural: 'Projects',
+    singular: 'Projects Block',
+    plural: 'Projects Blocks',
   },
   fields: [
+    {
+      name: 'isHome',
+      label: 'Is home',
+      type: 'checkbox',
+    },
+    {
+      name: 'headline',
+      label: 'Headline',
+      type: 'text',
+      localized: true,
+      required: true,
+      admin: {
+        condition: (data, { isHome }) => Boolean(isHome),
+      }
+    },
+    {
+      name: 'description',
+      type: 'textarea',
+      label: 'Description',
+      localized: true,
+      required: true,
+      admin: {
+        condition: (data, { isHome }) => Boolean(isHome),
+      },
+    },
     {
       name: 'featuredProjects',
       label: 'Featured Projects',

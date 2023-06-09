@@ -3,6 +3,7 @@ import Projects from "../blocks/Projects";
 import Awards from '../blocks/Awards'
 import Members from "../blocks/Members";
 import Partners from "../blocks/Partners";
+import Services from "../blocks/Services";
 
 const Pages: CollectionConfig = {
   slug: 'pages',
@@ -15,8 +16,17 @@ const Pages: CollectionConfig = {
   fields: [
     {
       name: 'title',
+      label: 'Intro',
       type: 'text',
       localized: true,
+      required: true,
+    },
+    {
+      name: 'intro',
+      label: 'Intro',
+      type: 'textarea',
+      localized: true,
+      required: true,
     },
     {
       name: 'Layout',
@@ -25,7 +35,8 @@ const Pages: CollectionConfig = {
         Projects,
         Awards,
         Members,
-        Partners
+        Partners,
+        Services
       ]
     },
   ]

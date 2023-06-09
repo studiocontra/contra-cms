@@ -3,8 +3,8 @@ import { Block } from "payload/types";
 const Awards: Block = {
   slug: 'awards',
   labels: {
-    singular: 'Awards',
-    plural: 'Awards'
+    singular: 'Awards Block',
+    plural: 'Awards Blocks'
   },
   fields: [
     {
