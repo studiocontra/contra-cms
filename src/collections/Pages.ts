@@ -4,6 +4,7 @@ import Awards from '../blocks/Awards'
 import Members from "../blocks/Members";
 import Partners from "../blocks/Partners";
 import Services from "../blocks/Services";
+import HeadlineContent from "../blocks/HeadlineContent";
 
 const Pages: CollectionConfig = {
   slug: 'pages',
@@ -36,7 +37,8 @@ const Pages: CollectionConfig = {
         Awards,
         Members,
         Partners,
-        Services
+        Services,
+        HeadlineContent
       ]
     },
   ]
