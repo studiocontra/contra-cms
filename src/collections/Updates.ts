@@ -32,7 +32,7 @@ const Updates: CollectionConfig = {
       name: 'layout',
       label: 'Page Layout',
       type: 'blocks',
-      minRows: 3,
+      minRows: 1,
       blocks: [
         MediaHeadline,
         Intro,
