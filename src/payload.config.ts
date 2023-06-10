@@ -1,5 +1,6 @@
 import { buildConfig } from 'payload/config';
 import path from 'path';
+
 // import Examples from './collections/Examples';
 import Users from './collections/Users';
 import Media from './collections/Media';
@@ -22,11 +23,11 @@ export default buildConfig({
     Users,
     Media,
     Updates,
-    Team,
     Projects,
     Categories,
     Awards,
     Pages,
+    Team
   ],
 
   typescript: {
@@ -36,7 +37,7 @@ export default buildConfig({
   localization: {
     defaultLocale: 'es',
     locales: ['en', 'es'],
-    fallback: true
+    fallback: false
   },
 
   graphQL: {

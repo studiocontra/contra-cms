@@ -5,6 +5,8 @@ import Members from "../blocks/Members";
 import Partners from "../blocks/Partners";
 import Services from "../blocks/Services";
 import HeadlineContent from "../blocks/HeadlineContent";
+import Content from "../blocks/Content";
+import List from "../blocks/List";
 
 const Pages: CollectionConfig = {
   slug: 'pages',
@@ -17,7 +19,7 @@ const Pages: CollectionConfig = {
   fields: [
     {
       name: 'title',
-      label: 'Intro',
+      label: 'Title',
       type: 'text',
       localized: true,
       required: true,
@@ -33,12 +35,14 @@ const Pages: CollectionConfig = {
       name: 'Layout',
       type: 'blocks',
       blocks: [
+        HeadlineContent,
+        Content,
+        List,
         Projects,
         Awards,
         Members,
         Partners,
         Services,
-        HeadlineContent
       ]
     },
   ]
