@@ -4,6 +4,9 @@ const Awards: CollectionConfig = {
   slug: 'awards',
   admin: {
     useAsTitle: 'title',
+    defaultColumns: [
+      'title',
+    ]
   },
   access: {
     read: () => true

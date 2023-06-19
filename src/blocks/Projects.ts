@@ -8,35 +8,11 @@ const Projects: Block = {
   },
   fields: [
     {
-      name: 'isHome',
-      label: 'Is home',
-      type: 'checkbox',
-    },
-    {
-      name: 'headline',
-      label: 'Headline',
-      type: 'text',
-      localized: true,
-      required: true,
-      admin: {
-        condition: (data, { isHome }) => Boolean(isHome),
-      }
-    },
-    {
-      name: 'description',
-      type: 'textarea',
-      label: 'Description',
-      localized: true,
-      required: true,
-      admin: {
-        condition: (data, { isHome }) => Boolean(isHome),
-      },
-    },
-    {
       name: 'featuredProjects',
       label: 'Featured Projects',
       type: 'relationship',
       relationTo: 'projects',
+      hasMany: true,
       filterOptions: {
         featured: { equals: true },
       },
@@ -51,6 +27,7 @@ const Projects: Block = {
       label: 'More Projects',
       type: 'relationship',
       relationTo: 'projects',
+      hasMany: true,
       filterOptions: {
         featured: { equals: false },
       },

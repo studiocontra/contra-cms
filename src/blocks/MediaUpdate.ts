@@ -3,8 +3,8 @@ import { Block } from "payload/types";
 const MediaUpdate: Block = {
   slug: 'mediaUpdate',
   labels: {
-    singular: 'Media Update Block',
-    plural: 'Media Update Blocks'
+    singular: 'Media Block',
+    plural: 'Media Blocks'
   },
   fields: [
     {

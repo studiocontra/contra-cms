@@ -8,6 +8,20 @@ const Awards: Block = {
   },
   fields: [
     {
+      name: 'headline',
+      label: 'Headline',
+      type: 'text',
+      localized: true,
+      required: true
+    },
+    {
+      name: 'intro',
+      label: 'Intro',
+      type: 'textarea',
+      localized: true,
+      required: true
+    },
+    {
       name: 'awards',
       type: 'relationship',
       relationTo: 'awards',

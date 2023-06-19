@@ -13,8 +13,7 @@ import Pages from './collections/Pages';
 
 export default buildConfig({
   serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL,
-  cors: [process.env.PAYLOAD_PUBLIC_SERVER_URL, process.env.PAYLOAD_PUBLIC_SITE_URL],
-  csrf: [process.env.PAYLOAD_PUBLIC_SERVER_URL, process.env.PAYLOAD_PUBLIC_SITE_URL],
+
   admin: {
     user: Users.slug,
   },
@@ -37,7 +36,7 @@ export default buildConfig({
   localization: {
     defaultLocale: 'es',
     locales: ['en', 'es'],
-    fallback: false
+    fallback: true
   },
 
   graphQL: {

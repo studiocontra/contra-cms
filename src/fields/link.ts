@@ -21,6 +21,11 @@ const link: Field = {
       type: 'checkbox',
       label: 'Open in new tab',
     },
+    {
+      name: 'logo',
+      type: 'upload',
+      relationTo: 'media',
+    }
   ],
 }
 

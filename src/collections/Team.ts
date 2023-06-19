@@ -25,6 +25,7 @@ const Team: CollectionConfig = {
     {
       name: 'featured',
       type: 'checkbox',
+      defaultValue: false,
     },
     {
       name: 'description',

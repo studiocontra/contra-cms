@@ -13,7 +13,6 @@ const Updates: CollectionConfig = {
     useAsTitle: 'title',
     defaultColumns: [
       'title',
-      'slug',
       'publishDate',
       'status'
     ]
@@ -27,6 +26,12 @@ const Updates: CollectionConfig = {
       type: 'text',
       localized: true,
       required: true
+    },
+    {
+      name: 'thumbnail',
+      label: 'Thumbnail',
+      type: 'upload',
+      relationTo: 'media',
     },
     {
       name: 'layout',

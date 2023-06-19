@@ -5,6 +5,8 @@ import Media from '../blocks/Media'
 
 import link from '../fields/link'
 
+import formatSlug from "../hooks/formatSlug";
+
 const Projects: CollectionConfig = {
   slug: 'projects',
   admin: {
@@ -14,6 +16,19 @@ const Projects: CollectionConfig = {
     read: () => true
   },
   fields: [
+    {
+      name: 'slug',
+      type: 'text',
+      required: true,
+      admin: {
+        position: 'sidebar'
+      },
+      hooks: {
+        beforeValidate: [
+          formatSlug('title')
+        ]
+      }
+    },
     {
       name: 'featured',
       type: 'checkbox',
@@ -47,6 +62,24 @@ const Projects: CollectionConfig = {
       required: true,
     },
     {
+      name: 'width',
+      label: 'Image width',
+      type: 'select',
+      options: [
+        {
+          label: 'Half',
+          value: 'half',
+        },
+        {
+          label: 'Full Width',
+          value: 'full',
+        },
+      ],
+      admin: {
+        condition: (data, { featured }) => Boolean(featured),
+      },
+    },
+    {
       name: 'preview',
       label: 'Preview image',
       type: 'upload',
@@ -54,7 +87,7 @@ const Projects: CollectionConfig = {
       admin: {
         condition: (data, { featured }) => Boolean(featured),
       },
-      required: true
+      required: true,
     },
     {
       name: 'categories',

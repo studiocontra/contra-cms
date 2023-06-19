@@ -8,10 +8,16 @@ const Intro: Block = {
   },
   fields: [
     {
-      name: 'paragraph',
-      type: 'textarea',
+      name: 'intro',
+      label: 'Intro',
+      type: 'richText',
       localized: true,
-      required: true
+      required: true,
+      admin: {
+        elements: [
+          'link',
+        ]
+      }
     }
   ]
 }

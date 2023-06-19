@@ -13,7 +13,7 @@ const Media: CollectionConfig = {
   upload: {
     adminThumbnail: 'thumbnail',
     staticDir: path.resolve(__dirname, '../../media'),
-    mimeTypes: ['image/avif', 'image/gif'],
+    mimeTypes: ['image/gif', 'image/webp'],
     imageSizes: [
       {
         name: 'mobile',
