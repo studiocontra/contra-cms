@@ -97,6 +97,14 @@ const Projects: CollectionConfig = {
       required: true,
     },
     {
+      name: 'nextProject',
+      type: 'text',
+      required: true,
+      admin: {
+        condition: (data, { featured }) => Boolean(featured),
+      },
+    },
+    {
       name: 'images',
       label: 'Slider',
       type: 'array',

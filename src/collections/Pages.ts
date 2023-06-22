@@ -4,6 +4,7 @@ import Awards from '../blocks/Awards'
 import Members from "../blocks/Members";
 import Partners from "../blocks/Partners";
 import Services from "../blocks/Services";
+import Updates from "../blocks/Updates";
 import HeadlineContent from "../blocks/HeadlineContent";
 import Content from "../blocks/Content";
 import List from "../blocks/List";
@@ -43,6 +44,7 @@ const Pages: CollectionConfig = {
         Members,
         Partners,
         Services,
+        Updates,
       ]
     },
   ]

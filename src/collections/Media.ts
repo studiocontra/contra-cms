@@ -14,28 +14,6 @@ const Media: CollectionConfig = {
     adminThumbnail: 'thumbnail',
     staticDir: path.resolve(__dirname, '../../media'),
     mimeTypes: ['image/gif', 'image/webp'],
-    imageSizes: [
-      {
-        name: 'mobile',
-        width: 480,
-        height: undefined,
-      },
-      {
-        name: 'tablet',
-        width: 768,
-        height: undefined,
-      },
-      {
-        name: 'netbook',
-        width: 1024,
-        height: undefined,
-      },
-      {
-        name: 'desktop',
-        width: 1440,
-        height: undefined
-      }
-    ],
   },
   fields: [
     {

@@ -11,7 +11,9 @@ const Categories: CollectionConfig = {
   fields: [
     {
       name: 'name',
-      type: 'text'
+      type: 'text',
+      localized: true,
+      required: true
     },
   ]
 }
