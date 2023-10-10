@@ -11,7 +11,8 @@ const Media: CollectionConfig = {
     group: 'Media'
   },
   upload: {
-    adminThumbnail: 'thumbnail',
+    adminThumbnail: ({ doc }) =>
+    `https://raw.githubusercontent.com/studiocontra/contra-cms/master/media/${doc.filename}`,
     staticDir: path.resolve(__dirname, '../../media'),
     mimeTypes: ['image/gif', 'image/webp'],
   },
@@ -23,7 +24,7 @@ const Media: CollectionConfig = {
       type: 'text',
       required: true
     }
-  ]
+  ],
 }
 
 export default Media
