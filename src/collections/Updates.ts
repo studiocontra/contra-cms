@@ -32,6 +32,7 @@ const Updates: CollectionConfig = {
       label: 'Thumbnail',
       type: 'upload',
       relationTo: 'media',
+      required: true
     },
     {
       name: 'layout',
